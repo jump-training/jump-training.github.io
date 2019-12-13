@@ -73,8 +73,8 @@ Step 5. Git download
 
 Step 6. Launch Unity with ml-agents project
   
-  1)Open Unity project ml-agents/UnitySDK
-* ![Launch](./image/6.png)
+  1)Open Unity project ml-agents/UnitySDK  
+![Launch](./image/6.png)  
 
 Step 7. Train Agent via Deep Reinforcement Learning
 
@@ -84,8 +84,8 @@ Step 7. Train Agent via Deep Reinforcement Learning
   
   3)Wait till step reaches max_steps variable that has been set in trainer_config.yaml (Force Abort Training with Ctrl  + C)
   
-  4)Create Trained Model File(models/brain_name.nn)
-* ![Train](./image/7.png)  
+  4)Create Trained Model File(models/brain_name.nn)  
+![Train](./image/7.png)  
 
 Step 8. End Training
   
@@ -97,8 +97,8 @@ Step 9. Set the Learned Agent Model
   
   1)Move Trained Model File to Project Folder
   
-  2)Set it to the Brain Model
-* ![Set](./image/9.png)  
+  2)Set it to the Brain Model  
+![Set](./image/9.png)   
 
 
 ## Ⅵ. Related Work(e.g., existing studies)
