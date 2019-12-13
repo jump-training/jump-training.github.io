@@ -27,6 +27,8 @@ This solution is called Unity Machine Learning Agents(ML-Agents) and is a beta v
 * The three main kinds of objects within any Learning Environment are: Agent, Brain, Academy
 ## Ⅴ. Process
 
+[![Setting](http://img.youtube.com/vi/matu6cs7aBw/0.jpg)](https://www.youtube.com/watch?v=matu6cs7aBw&feature=youtu.be)
+
 Step 1. Install Cuda
   
   1)Go to https://developer.nvidia.com/cuda-downloads
