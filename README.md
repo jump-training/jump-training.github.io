@@ -28,11 +28,13 @@ This solution is called Unity Machine Learning Agents(ML-Agents) and is a beta v
 ## Ⅴ. Process
 
 Step 1. Install Cuda
+  
   1)Go to https://developer.nvidia.com/cuda-downloads
   
   2)Download and Install
 
 Step 2. Install Anaconda
+  
   1)Go to https://www.anaconda.com/distribution
   
   2)Download and Install
@@ -40,6 +42,7 @@ Step 2. Install Anaconda
   3)Have python set
 
 Step 3. System Environment variable Path set
+  
   1)Approach to System environmentvariable
   
   2)Edit Path
@@ -51,6 +54,7 @@ Step 3. System Environment variable Path set
   C:\ProgramData\Anaconda3\python.exe
 
 Step 4. Install Tensorflow
+  
   1)Execute Anaconda CMD
   
   2)conda create -n ml-agents python=3.6
@@ -60,14 +64,17 @@ Step 4. Install Tensorflow
   4)pip install tensorflow==1.7.1
 
 Step 5. Git download
+  
   1)cd directory set in Anaconda CMD
   
   2)git clone https://github.com/jump-training/jump-training.github.io.git
 
 Step 6. Launch Unity with ml-agents project
+  
   1)Open Unity project ml-agents/UnitySDK
 
 Step 7. Train Agent via Deep Reinforcement Learning
+  
   1)Start train with pre-defined parameters and settings in Config/trainer_config.yaml file
   
   2)mlagents-learn config/trainer_config.yaml --run-id=firstRun –train
@@ -77,11 +84,15 @@ Step 7. Train Agent via Deep Reinforcement Learning
   4)Create Trained Model File(models/brain_name.nn)
 
 Step 8. End Training
+  
   1)Abort Training with Ctrl  + C
+  
   2)Create Trained Model File(brain_name.nn)
 
 Step 9. Set the Learned Agent Model
+  
   1)Move Trained Model File to Project Folder
+  
   2)Set it to the Brain Model
 
 
