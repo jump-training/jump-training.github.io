@@ -117,6 +117,8 @@ Step 9. Set the Learned Agent Model
   2)Set it to the Brain Model  
 ![Set](./image/9.png)   
 
+Cf. Here's the entire tutorial video
+<iframe width="640" height="360" src="https://www.youtube.com/embed/9M_yeAVkCOs" frameborder="0" gesture="media" allowfullscreen=""></iframe>
 
 ## Ⅵ. Related Work(e.g., existing studies)
 * Hide / Escape - Avoidance of Pursuing Enemies.  
