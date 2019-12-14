@@ -128,6 +128,8 @@ Step 9. Set the Learned Agent Model
  
 
 Cf. Here's the entire tutorial video
+[![Video Label](http://img.youtube.com/vi/9M_yeAVkCOs/0.jpg)](https://youtu.be/9M_yeAVkCOs?t=0s) Video Label
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9M_yeAVkCOs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Ⅵ. Related Work(e.g., existing studies)
