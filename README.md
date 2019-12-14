@@ -11,7 +11,7 @@
 * The main objective: To get **4-legged-walking** model simulating.
 
 ## Ⅱ. Dataset
-* 
+* We created our own Trained Model File so there's no external dataset.
 
 ## Ⅲ. Methodology
 * The algorithm we're going to use mainly is DRL, Deep Reinforcement Learning. Deep reinforcement learning (DRL) uses deep learning and reinforcement learning principles in order to create efficient algorithms that can be applied on areas like robotics, video games, finance and healthcare.[1] Implementing deep learning architecture (deep neural networks or etc.) with reinforcement learning algorithms (Q-learning, actor critic or etc.), a powerful model (DRL) can be created that is capable to scale to previously unsolvable problems. You must decide policy so that you can define reward and negative function. DRL can dramatically improve the result by the appropriate setting, especially in Reward and Negative function part.
