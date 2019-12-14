@@ -27,7 +27,6 @@ This solution is called Unity Machine Learning Agents(ML-Agents) and is a beta v
 * The three main kinds of objects within any Learning Environment are: Agent, Brain, Academy
 ## Ⅴ. Process
 
-[![Setting](http://img.youtube.com/vi/matu6cs7aBw/0.jpg)](https://www.youtube.com/watch?v=matu6cs7aBw&feature=youtu.be)
 
 Step 1. Install Cuda
 ![Picture1](https://user-images.githubusercontent.com/46990290/70840194-02b93600-1e54-11ea-81d6-9ffab3ae821b.jpg)
@@ -55,12 +54,14 @@ Step 3. System Environment variable Path set
   2)Edit Path
   
   3)
-  C:\ProgramData\Anaconda3\Scripts
-  C:\ProgramData\Anaconda3\Scripts\conda.exe
-  C:\ProgramData\Anaconda3
-  C:\ProgramData\Anaconda3\python.exe
+    C:\ProgramData\Anaconda3\Scripts
+    C:\ProgramData\Anaconda3\Scripts\conda.exe
+    C:\ProgramData\Anaconda3
+    C:\ProgramData\Anaconda3\python.exe
 
 Step 4. Install Tensorflow
+![Picture4](https://user-images.githubusercontent.com/46990290/70840251-5b88ce80-1e54-11ea-8ede-7b9f8ed362db.jpg)
+
   
   1)Execute Anaconda CMD
   
@@ -71,17 +72,25 @@ Step 4. Install Tensorflow
   4)pip install tensorflow==1.7.1
 
 Step 5. Git download
+![Picture5](https://user-images.githubusercontent.com/46990290/70840264-765b4300-1e54-11ea-9a8a-d5b11e9d69a9.jpg)
+
   
   1)cd directory set in Anaconda CMD
   
   2)git clone https://github.com/jump-training/jump-training.github.io.git
 
+
 Step 6. Launch Unity with ml-agents project
+![Picture6](https://user-images.githubusercontent.com/46990290/70840273-83783200-1e54-11ea-8ce3-2f2e8211e162.jpg)
+
   
   1)Open Unity project ml-agents/UnitySDK  
-![Launch](./image/6.png)  
+
+
 
 Step 7. Train Agent via Deep Reinforcement Learning
+![Picture8-1](https://user-images.githubusercontent.com/46990290/70840289-9ee33d00-1e54-11ea-9b9e-99a8aa75f77a.jpg)
+![Picture8-2](https://user-images.githubusercontent.com/46990290/70840294-a99dd200-1e54-11ea-9646-33419ed0498a.jpg)
 
   1)Start train with pre-defined parameters and settings in Config/trainer_config.yaml file
   
@@ -89,16 +98,19 @@ Step 7. Train Agent via Deep Reinforcement Learning
   
   3)Wait till step reaches max_steps variable that has been set in trainer_config.yaml (Force Abort Training with Ctrl  + C)
   
-  4)Create Trained Model File(models/brain_name.nn)  
-![Train](./image/7.png)  
+  4)Create Trained Model File(models/brain_name.nn)    
 
 Step 8. End Training
+![Picture9](https://user-images.githubusercontent.com/46990290/70840299-b4f0fd80-1e54-11ea-9a4c-c20fe06e022e.jpg)
+
   
   1)Abort Training with Ctrl  + C
   
   2)Create Trained Model File(brain_name.nn)
 
 Step 9. Set the Learned Agent Model
+![Picture10](https://user-images.githubusercontent.com/46990290/70840307-bf12fc00-1e54-11ea-9d3a-6fcb02dc02ad.jpg)
+
   
   1)Move Trained Model File to Project Folder
   
