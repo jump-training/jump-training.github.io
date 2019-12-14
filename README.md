@@ -30,12 +30,15 @@ This solution is called Unity Machine Learning Agents(ML-Agents) and is a beta v
 [![Setting](http://img.youtube.com/vi/matu6cs7aBw/0.jpg)](https://www.youtube.com/watch?v=matu6cs7aBw&feature=youtu.be)
 
 Step 1. Install Cuda
+![Picture1](https://user-images.githubusercontent.com/46990290/70840194-02b93600-1e54-11ea-81d6-9ffab3ae821b.jpg)
   
   1)Go to https://developer.nvidia.com/cuda-downloads
   
   2)Download and Install
 
 Step 2. Install Anaconda
+![Picture2](https://user-images.githubusercontent.com/46990290/70840205-1b295080-1e54-11ea-857d-0ef34bfacfa3.jpg)
+
   
   1)Go to https://www.anaconda.com/distribution
   
@@ -44,6 +47,8 @@ Step 2. Install Anaconda
   3)Have python set
 
 Step 3. System Environment variable Path set
+![Picture3](https://user-images.githubusercontent.com/46990290/70840216-2e3c2080-1e54-11ea-8361-03da6ad43e68.jpg)
+
   
   1)Approach to System environmentvariable
   
