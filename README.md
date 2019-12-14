@@ -127,7 +127,7 @@ Step 9. Set the Learned Agent Model
   2)Set it to the Brain Model  
  
 
-Cf. Here's the entire tutorial video
+Cf. Here's the entire tutorial video(Click to Play)
 
 [![Video Label](http://img.youtube.com/vi/matu6cs7aBw/0.jpg)](https://youtu.be/matu6cs7aBw?t=0s) 
 
@@ -152,12 +152,12 @@ Pass the Butter / Pancake bot
 * We could see that machine learning acutally acts as we predicted. It improved in performance as trained more.
 * To See the acutal improvement of performance, we attached before&after video of it.
 
--Before
+-Before(Click to Play)
 
 [![Video Label](http://img.youtube.com/vi/9M_yeAVkCOs/0.jpg)](https://youtu.be/9M_yeAVkCOs?t=0s) 
 
 
--After
+-After(Click to Play)
 
 [![Video Label](http://img.youtube.com/vi/YWVeRdl0A84/0.jpg)](https://youtu.be/YWVeRdl0A84?t=0s) 
 
