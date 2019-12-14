@@ -29,6 +29,7 @@ This solution is called Unity Machine Learning Agents(ML-Agents) and is a beta v
 
 
 Step 1. Install Cuda
+
 ![Picture1](https://user-images.githubusercontent.com/46990290/70840194-02b93600-1e54-11ea-81d6-9ffab3ae821b.jpg)
   
   1)Go to https://developer.nvidia.com/cuda-downloads
@@ -36,6 +37,7 @@ Step 1. Install Cuda
   2)Download and Install
 
 Step 2. Install Anaconda
+
 ![Picture2](https://user-images.githubusercontent.com/46990290/70840205-1b295080-1e54-11ea-857d-0ef34bfacfa3.jpg)
 
   
@@ -46,6 +48,7 @@ Step 2. Install Anaconda
   3)Have python set
 
 Step 3. System Environment variable Path set
+
 ![Picture3](https://user-images.githubusercontent.com/46990290/70840216-2e3c2080-1e54-11ea-8361-03da6ad43e68.jpg)
 
   
@@ -60,6 +63,7 @@ Step 3. System Environment variable Path set
     C:\ProgramData\Anaconda3\python.exe
 
 Step 4. Install Tensorflow
+
 ![Picture4](https://user-images.githubusercontent.com/46990290/70840251-5b88ce80-1e54-11ea-8ede-7b9f8ed362db.jpg)
 
   
@@ -72,6 +76,7 @@ Step 4. Install Tensorflow
   4)pip install tensorflow==1.7.1
 
 Step 5. Git download
+
 ![Picture5](https://user-images.githubusercontent.com/46990290/70840264-765b4300-1e54-11ea-9a8a-d5b11e9d69a9.jpg)
 
   
@@ -81,6 +86,7 @@ Step 5. Git download
 
 
 Step 6. Launch Unity with ml-agents project
+
 ![Picture6](https://user-images.githubusercontent.com/46990290/70840273-83783200-1e54-11ea-8ce3-2f2e8211e162.jpg)
 
   
@@ -89,7 +95,9 @@ Step 6. Launch Unity with ml-agents project
 
 
 Step 7. Train Agent via Deep Reinforcement Learning
+
 ![Picture8-1](https://user-images.githubusercontent.com/46990290/70840289-9ee33d00-1e54-11ea-9b9e-99a8aa75f77a.jpg)
+
 ![Picture8-2](https://user-images.githubusercontent.com/46990290/70840294-a99dd200-1e54-11ea-9646-33419ed0498a.jpg)
 
   1)Start train with pre-defined parameters and settings in Config/trainer_config.yaml file
@@ -101,6 +109,7 @@ Step 7. Train Agent via Deep Reinforcement Learning
   4)Create Trained Model File(models/brain_name.nn)    
 
 Step 8. End Training
+
 ![Picture9](https://user-images.githubusercontent.com/46990290/70840299-b4f0fd80-1e54-11ea-9a4c-c20fe06e022e.jpg)
 
   
@@ -109,16 +118,17 @@ Step 8. End Training
   2)Create Trained Model File(brain_name.nn)
 
 Step 9. Set the Learned Agent Model
+
 ![Picture10](https://user-images.githubusercontent.com/46990290/70840307-bf12fc00-1e54-11ea-9d3a-6fcb02dc02ad.jpg)
 
   
   1)Move Trained Model File to Project Folder
   
   2)Set it to the Brain Model  
-![Set](./image/9.png)   
+ 
 
 Cf. Here's the entire tutorial video
-<iframe width="640" height="360" src="https://www.youtube.com/embed/9M_yeAVkCOs" frameborder="0" gesture="media" allowfullscreen=""></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9M_yeAVkCOs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Ⅵ. Related Work(e.g., existing studies)
 * Hide / Escape - Avoidance of Pursuing Enemies.  
