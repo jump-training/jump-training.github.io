@@ -128,9 +128,10 @@ Step 9. Set the Learned Agent Model
  
 
 Cf. Here's the entire tutorial video
-[![Video Label](http://img.youtube.com/vi/9M_yeAVkCOs/0.jpg)](https://youtu.be/9M_yeAVkCOs?t=0s) Video Label
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/9M_yeAVkCOs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Video Label](http://img.youtube.com/vi/matu6cs7aBw/0.jpg)](https://youtu.be/matu6cs7aBw?t=0s) 
+
+
 
 ## Ⅵ. Related Work(e.g., existing studies)
 * Hide / Escape - Avoidance of Pursuing Enemies.  
@@ -149,6 +150,17 @@ Pass the Butter / Pancake bot
 
 ## VII. Conclusion
 * We could see that machine learning acutally acts as we predicted. It improved in performance as trained more.
+* To See the acutal improvement of performance, we attached before&after video of it.
+
+-Before
+
+[![Video Label](http://img.youtube.com/vi/9M_yeAVkCOs/0.jpg)](https://youtu.be/9M_yeAVkCOs?t=0s) 
+
+
+-After
+
+[![Video Label](http://img.youtube.com/vi/YWVeRdl0A84/0.jpg)](https://youtu.be/YWVeRdl0A84?t=0s) 
+
 
 
 ## About ML-Agents
