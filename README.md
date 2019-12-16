@@ -1,4 +1,4 @@
-# 4-legged-walking
+  # 4-legged-walking
 
 ## Team Unity: 
 * Ko Kanghyuk, 2010009536, over2ture@gmail.com 
@@ -133,165 +133,164 @@ Cf. Here's the entire tutorial video(Click to Play)
 
 Cf2. Here's entire Source Code for the reference.
 
-if (isAwesome){
-using UnityEngine;
-using MLAgents;
+    using UnityEngine;
+    using MLAgents;
 
-[RequireComponent(typeof(JointDriveController))] // Required to set joint forces
-public class CrawlerAgent : Agent
-{
-    [Header("Target To Walk Towards")][Space(10)]
-    public Transform target;
-
-    public Transform ground;
-    public bool detectTargets;
-    public bool targetIsStatic;
-    public bool respawnTargetWhenTouched;
-    public float targetSpawnRadius;
-
-    [Header("Body Parts")][Space(10)] public Transform body;
-    public Transform leg0Upper;
-    public Transform leg0Lower;
-    public Transform leg1Upper;
-    public Transform leg1Lower;
-    public Transform leg2Upper;
-    public Transform leg2Lower;
-    public Transform leg3Upper;
-    public Transform leg3Lower;
-
-    [Header("Joint Settings")][Space(10)] JointDriveController m_JdController;
-    Vector3 m_DirToTarget;
-    float m_MovingTowardsDot;
-    float m_FacingDot;
-
-    [Header("Reward Functions To Use")][Space(10)]
-    public bool rewardMovingTowardsTarget; // Agent should move towards target
-
-    public bool rewardFacingTarget; // Agent should face the target
-    public bool rewardUseTimePenalty; // Hurry up
-
-    [Header("Foot Grounded Visualization")][Space(10)]
-    public bool useFootGroundedVisualization;
-
-    public MeshRenderer foot0;
-    public MeshRenderer foot1;
-    public MeshRenderer foot2;
-    public MeshRenderer foot3;
-    public Material groundedMaterial;
-    public Material unGroundedMaterial;
-    bool m_IsNewDecisionStep;
-    int m_CurrentDecisionStep;
-
-    Quaternion m_LookRotation;
-    Matrix4x4 m_TargetDirMatrix;
-
-    public override void InitializeAgent()
+    [RequireComponent(typeof(JointDriveController))] // Required to set joint forces
+    public class CrawlerAgent : Agent
     {
-        m_JdController = GetComponent<JointDriveController>();
-        m_CurrentDecisionStep = 1;
-        m_DirToTarget = target.position - body.position;
+        [Header("Target To Walk Towards")][Space(10)]
+        public Transform target;
 
+        public Transform ground;
+        public bool detectTargets;
+        public bool targetIsStatic;
+        public bool respawnTargetWhenTouched;
+            public float targetSpawnRadius;
 
-        // Setup each body part
-        m_JdController.SetupBodyPart(body);
-        m_JdController.SetupBodyPart(leg0Upper);
-        m_JdController.SetupBodyPart(leg0Lower);
-        m_JdController.SetupBodyPart(leg1Upper);
-        m_JdController.SetupBodyPart(leg1Lower);
-        m_JdController.SetupBodyPart(leg2Upper);
-        m_JdController.SetupBodyPart(leg2Lower);
-        m_JdController.SetupBodyPart(leg3Upper);
-        m_JdController.SetupBodyPart(leg3Lower);
-    }
+            [Header("Body Parts")][Space(10)] public Transform body;
+            public Transform leg0Upper;
+            public Transform leg0Lower;
+            public Transform leg1Upper;
+            public Transform leg1Lower;
+            public Transform leg2Upper;
+            public Transform leg2Lower;
+            public Transform leg3Upper;
+            public Transform leg3Lower;
 
-    // need to change the joint settings based on decision freq.
-    public void IncrementDecisionTimer()
-    {
-        if (m_CurrentDecisionStep == agentParameters.numberOfActionsBetweenDecisions
-            || agentParameters.numberOfActionsBetweenDecisions == 1)
+            [Header("Joint Settings")][Space(10)] JointDriveController m_JdController;
+            Vector3 m_DirToTarget;
+            float m_MovingTowardsDot;
+            float m_FacingDot;
+
+            [Header("Reward Functions To Use")][Space(10)]
+            public bool rewardMovingTowardsTarget; // Agent should move towards target
+
+            public bool rewardFacingTarget; // Agent should face the target
+            public bool rewardUseTimePenalty; // Hurry up
+
+            [Header("Foot Grounded Visualization")][Space(10)]
+            public bool useFootGroundedVisualization;
+
+            public MeshRenderer foot0;
+            public MeshRenderer foot1;
+            public MeshRenderer foot2;
+            public MeshRenderer foot3;
+            public Material groundedMaterial;
+            public Material unGroundedMaterial;
+            bool m_IsNewDecisionStep;
+            int m_CurrentDecisionStep;
+
+        Quaternion m_LookRotation;
+        Matrix4x4 m_TargetDirMatrix;
+
+        public override void InitializeAgent()
         {
-            m_CurrentDecisionStep = 1;
-            m_IsNewDecisionStep = true;
-        }
-        else
+            m_JdController = GetComponent<JointDriveController>();
+                m_CurrentDecisionStep = 1;
+                m_DirToTarget = target.position - body.position;
+
+
+                // Setup each body part
+                m_JdController.SetupBodyPart(body);
+                m_JdController.SetupBodyPart(leg0Upper);
+                m_JdController.SetupBodyPart(leg0Lower);
+                m_JdController.SetupBodyPart(leg1Upper);
+                m_JdController.SetupBodyPart(leg1Lower);
+                m_JdController.SetupBodyPart(leg2Upper);
+                m_JdController.SetupBodyPart(leg2Lower);
+                m_JdController.SetupBodyPart(leg3Upper);
+                m_JdController.SetupBodyPart(leg3Lower);
+            }
+
+        // need to change the joint settings based on decision freq.
+        public void IncrementDecisionTimer()
         {
-            m_CurrentDecisionStep++;
-            m_IsNewDecisionStep = false;
-        }
-    }
+            if (m_CurrentDecisionStep == agentParameters.numberOfActionsBetweenDecisions
+                || agentParameters.numberOfActionsBetweenDecisions == 1)
+            {
+                m_CurrentDecisionStep = 1;
+                m_IsNewDecisionStep = true;
+            }
+            else
+            {
+                m_CurrentDecisionStep++;
+                m_IsNewDecisionStep = false;
+            }
+       }
 
-    // add relevant information on each body part to observations.
-    public void CollectObservationBodyPart(BodyPart bp)
-    {
-        var rb = bp.rb;
-        AddVectorObs(bp.groundContact.touchingGround ? 1 : 0); // Whether the bp touching the ground
-
-        var velocityRelativeToLookRotationToTarget = m_TargetDirMatrix.inverse.MultiplyVector(rb.velocity);
-        AddVectorObs(velocityRelativeToLookRotationToTarget);
-
-        var angularVelocityRelativeToLookRotationToTarget = m_TargetDirMatrix.inverse.MultiplyVector(rb.angularVelocity);
-        AddVectorObs(angularVelocityRelativeToLookRotationToTarget);
-
-        if (bp.rb.transform != body)
+        // add relevant information on each body part to observations.
+        public void CollectObservationBodyPart(BodyPart bp)
         {
-            var localPosRelToBody = body.InverseTransformPoint(rb.position);
-            AddVectorObs(localPosRelToBody);
-            AddVectorObs(bp.currentXNormalizedRot); // Current x rot
-            AddVectorObs(bp.currentYNormalizedRot); // Current y rot
-            AddVectorObs(bp.currentZNormalizedRot); // Current z rot
-            AddVectorObs(bp.currentStrength / m_JdController.maxJointForceLimit);
+            var rb = bp.rb;
+            AddVectorObs(bp.groundContact.touchingGround ? 1 : 0); // Whether the bp touching the ground
+    
+            var velocityRelativeToLookRotationToTarget = m_TargetDirMatrix.inverse.MultiplyVector(rb.velocity);
+            AddVectorObs(velocityRelativeToLookRotationToTarget);
+    
+            var angularVelocityRelativeToLookRotationToTarget = m_TargetDirMatrix.inverse.MultiplyVector(rb.angularVelocity);
+            AddVectorObs(angularVelocityRelativeToLookRotationToTarget);
+    
+            if (bp.rb.transform != body)
+            {
+                var localPosRelToBody = body.InverseTransformPoint(rb.position);
+                AddVectorObs(localPosRelToBody);
+                AddVectorObs(bp.currentXNormalizedRot); // Current x rot
+                AddVectorObs(bp.currentYNormalizedRot); // Current y rot
+                AddVectorObs(bp.currentZNormalizedRot); // Current z rot
+                AddVectorObs(bp.currentStrength / m_JdController.maxJointForceLimit);
+            }
         }
-    }
-
-    public override void CollectObservations()
-    {
-        m_JdController.GetCurrentJointForces();
-
-        // Update pos to target
-        m_DirToTarget = target.position - body.position;
-        m_LookRotation = Quaternion.LookRotation(m_DirToTarget);
-        m_TargetDirMatrix = Matrix4x4.TRS(Vector3.zero, m_LookRotation, Vector3.one);
-
-        RaycastHit hit;
-        if (Physics.Raycast(body.position, Vector3.down, out hit, 10.0f))
+    
+        public override void CollectObservations()
         {
-            AddVectorObs(hit.distance);
+            m_JdController.GetCurrentJointForces();
+    
+            // Update pos to target
+            m_DirToTarget = target.position - body.position;
+            m_LookRotation = Quaternion.LookRotation(m_DirToTarget);
+            m_TargetDirMatrix = Matrix4x4.TRS(Vector3.zero, m_LookRotation, Vector3.one);
+    
+            RaycastHit hit;
+            if (Physics.Raycast(body.position, Vector3.down, out hit, 10.0f))
+            {
+                AddVectorObs(hit.distance);
+            }
+            else
+                AddVectorObs(10.0f);
+    
+            // Forward & up to help with orientation
+            var bodyForwardRelativeToLookRotationToTarget = m_TargetDirMatrix.inverse.MultiplyVector(body.forward);
+            AddVectorObs(bodyForwardRelativeToLookRotationToTarget);
+    
+            var bodyUpRelativeToLookRotationToTarget = m_TargetDirMatrix.inverse.MultiplyVector(body.up);
+            AddVectorObs(bodyUpRelativeToLookRotationToTarget);
+    
+            foreach (var bodyPart in m_JdController.bodyPartsDict.Values)
+            {
+                CollectObservationBodyPart(bodyPart);
+            }
         }
-        else
-            AddVectorObs(10.0f);
-
-        // Forward & up to help with orientation
-        var bodyForwardRelativeToLookRotationToTarget = m_TargetDirMatrix.inverse.MultiplyVector(body.forward);
-        AddVectorObs(bodyForwardRelativeToLookRotationToTarget);
-
-        var bodyUpRelativeToLookRotationToTarget = m_TargetDirMatrix.inverse.MultiplyVector(body.up);
-        AddVectorObs(bodyUpRelativeToLookRotationToTarget);
-
-        foreach (var bodyPart in m_JdController.bodyPartsDict.Values)
+    
+        // Agent touched the target
+        public void TouchedTarget()
         {
-            CollectObservationBodyPart(bodyPart);
+            AddReward(1f);
+            if (respawnTargetWhenTouched)
+            {
+                GetRandomTargetPos();
+            }
         }
-    }
-
-    // Agent touched the target
-    public void TouchedTarget()
-    {
-        AddReward(1f);
-        if (respawnTargetWhenTouched)
+    
+        // Moves target to a random position within specified radius.
+        public void GetRandomTargetPos()
         {
-            GetRandomTargetPos();
+            var newTargetPos = Random.insideUnitSphere * targetSpawnRadius;
+            newTargetPos.y = 5;
+            target.position = newTargetPos + ground.position;
         }
-    }
-
-    // Moves target to a random position within specified radius.
-    public void GetRandomTargetPos()
-    {
-        var newTargetPos = Random.insideUnitSphere * targetSpawnRadius;
-        newTargetPos.y = 5;
-        target.position = newTargetPos + ground.position;
-    }
-
-    public override void AgentAction(float[] vectorAction, string textAction)
+    
+        public override void AgentAction(float[] vectorAction, string textAction)
     {
         if (detectTargets)
         {
@@ -411,9 +410,6 @@ public class CrawlerAgent : Agent
     }
 }
 
-  return true
-
-}
 
 
 ## Ⅵ. Related Work(e.g., existing studies)
