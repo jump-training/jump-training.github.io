@@ -133,7 +133,7 @@ Cf. Here's the entire tutorial video(Click to Play)
 
 Cf2. Here's entire Source Code for the reference.
 
-if(isAwesome){
+if (isAwesome){
 using UnityEngine;
 using MLAgents;
 
