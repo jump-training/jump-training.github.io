@@ -132,7 +132,8 @@ Cf. Here's the entire tutorial video(Click to Play)
 [![Video Label](http://img.youtube.com/vi/matu6cs7aBw/0.jpg)](https://youtu.be/matu6cs7aBw?t=0s) 
 
 Cf2. Here's entire Source Code for the reference.
-    '''python
+'''python
+ 
     using UnityEngine;
     using MLAgents;
 
@@ -408,9 +409,9 @@ Cf2. Here's entire Source Code for the reference.
         m_IsNewDecisionStep = true;
         m_CurrentDecisionStep = 1;
     }
-    '''
 
 
+'''
 
 ## Ⅵ. Related Work(e.g., existing studies)
 * Hide / Escape - Avoidance of Pursuing Enemies.  
