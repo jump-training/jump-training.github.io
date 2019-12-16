@@ -56,7 +56,7 @@ Step 3. System Environment variable Path set
   
   2)Edit Path
   
-  3)
+ 3)
     C:\ProgramData\Anaconda3\Scripts
     C:\ProgramData\Anaconda3\Scripts\conda.exe
     C:\ProgramData\Anaconda3
