@@ -133,7 +133,7 @@ Cf. Here's the entire tutorial video(Click to Play)
 
 Cf2. Here's entire Source Code for the reference.
 
-'''python
+if(isAwesome){
 using UnityEngine;
 using MLAgents;
 
@@ -411,7 +411,9 @@ public class CrawlerAgent : Agent
     }
 }
 
-'''
+return true
+
+}
 
 
 ## Ⅵ. Related Work(e.g., existing studies)
