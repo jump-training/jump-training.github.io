@@ -132,7 +132,6 @@ Cf. Here's the entire tutorial video(Click to Play)
 [![Video Label](http://img.youtube.com/vi/matu6cs7aBw/0.jpg)](https://youtu.be/matu6cs7aBw?t=0s) 
 
 Cf2. Here's entire Source Code for the reference.
-'''python
  
     using UnityEngine;
     using MLAgents;
@@ -410,8 +409,21 @@ Cf2. Here's entire Source Code for the reference.
         m_CurrentDecisionStep = 1;
     }
 
+Cf3. Following Options are essential. Make sure you do check the following picture.
 
-'''
+1.Needs llocated Brain
+![Picturea](https://user-images.githubusercontent.com/46990290/70882488-4efea480-2013-11ea-810f-03fbfa0c6f2c.jpg)
+
+
+2.Allocate Brain FreeMap of ML-Agents Unity SDK
+![Pictureb](https://user-images.githubusercontent.com/46990290/70882548-7e151600-2013-11ea-8284-8addcfa7993a.jpg)
+![Picturec](https://user-images.githubusercontent.com/46990290/70882568-8705e780-2013-11ea-85fc-750f5ccbf54f.jpg)
+
+
+3.Brain Control Option Check
+![Pictured](https://user-images.githubusercontent.com/46990290/70882594-984ef400-2013-11ea-8b3b-19c3ab5c9ea6.jpg)
+
+    
 
 ## Ⅵ. Related Work(e.g., existing studies)
 * Hide / Escape - Avoidance of Pursuing Enemies.  
