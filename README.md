@@ -1,7 +1,6 @@
   # 4-legged-walking
 
 ## Team Unity: 
-* Ko Kanghyuk, 2010009536, over2ture@gmail.com 
 * Kim Gihyun, 2014005341, progkim8@naver.com
 * Ha Dongsu, 2014005687, gkehdtn4218@gmail.com
 
